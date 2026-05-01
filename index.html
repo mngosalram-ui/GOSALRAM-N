@@ -6,10 +6,25 @@
 <title>Gosalram N | Portfolio</title>
 
 <style>
+:root {
+    --bg: #f4f6f9;
+    --text: #333;
+    --card: white;
+    --primary: #3498db;
+}
+
+.dark {
+    --bg: #121212;
+    --text: #eee;
+    --card: #1e1e1e;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #f4f6f9;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
 }
 
 /* NAVBAR */
@@ -31,54 +46,71 @@ header {
     padding: 60px 20px;
     background: linear-gradient(to right, #2c3e50, #3498db);
     color: white;
-    animation: fadeIn 1.5s ease-in;
-}
-
-/* SECTIONS */
-section {
-    max-width: 900px;
-    margin: 30px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-section:hover {
-    transform: scale(1.02);
-}
-
-h2 {
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 5px;
 }
 
 /* BUTTON */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background: #3498db;
+    padding: 10px 18px;
+    background: var(--primary);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     margin-top: 10px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #2c80b4;
 }
 
-/* ICON STYLE */
-.icon {
-    margin-right: 8px;
+/* SECTION */
+section {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
 }
 
-/* ANIMATION */
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* LIST */
+ul {
+    padding-left: 20px;
+}
+
+/* TOGGLE BUTTON */
+.toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: black;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 </style>
-
 </head>
 
 <body>
+
+<div class="toggle" onclick="toggleMode()">🌙</div>
 
 <nav>
     <a href="#about">About</a>
@@ -92,16 +124,16 @@ h2 {
 <header>
     <h1>Gosalram N</h1>
     <p>MBA | Finance & Operations | Aspiring Analyst</p>
+
+    <a href="Gosalram_Resume.pdf" class="btn" download>Download Resume</a>
     <br>
-   <a href="Gosalram_Resume.pdf" class="btn" download>Download Resume</a>
-    <br><br>
-<a href="https://www.linkedin.com/in/gosalram-n-2164a52b1/" class="btn" target="_blank">LinkedIn Profile</a>
+    <a href="https://www.linkedin.com/in/gosalram-n-2164a52b1/" class="btn" target="_blank">LinkedIn Profile</a>
 </header>
 
 <section id="about">
 <h2>About Me</h2>
 <p>
-MBA graduate specializing in Finance and Operations with strong analytical and problem-solving skills. Passionate about financial analysis, business insights, and process improvement.
+MBA graduate specializing in Finance and Operations with strong analytical and problem-solving skills.
 </p>
 </section>
 
@@ -114,62 +146,72 @@ MBA graduate specializing in Finance and Operations with strong analytical and p
 <section id="projects">
 <h2>Projects</h2>
 
-<p><b>Impact of Industry 4.0 on Financial Sustainability</b><br>
-Bay Forge Pvt Ltd<br>
-Analyzed cost efficiency and sustainability impact.<br>
-<a href="industry4_project.pdf" class="btn" target="_blank">View Project</a>
-</p>
+<div class="cards">
 
-<p><b>Organizational Performance Study</b><br>
-Sodecia India Pvt Ltd<br>
-Identified productivity gaps and improvements.<br>
+<div class="card">
+<h3>Industry 4.0 Financial Study</h3>
+<p>Analyzed cost efficiency and sustainability impact.</p>
+<a href="industry4_project.pdf" class="btn" target="_blank">View Project</a>
+</div>
+
+<div class="card">
+<h3>Organizational Performance</h3>
+<p>Identified productivity gaps and improvements.</p>
 <a href="sodecia_project.pdf" class="btn" target="_blank">View Project</a>
-</p>
+</div>
+
+</div>
 </section>
 
 <section id="skills">
 <h2>Technical Skills</h2>
 <ul>
-<li>📊 SAP FICO</li>
-<li>📈 IBM SPSS</li>
-<li>📉 MS Excel</li>
-<li>📊 Power BI</li>
-<li>💻 Microsoft 365</li>
-<li>🎨 Canva</li>
+<li>SAP FICO</li>
+<li>IBM SPSS</li>
+<li>MS Excel</li>
+<li>Power BI</li>
+<li>Microsoft 365</li>
+<li>Canva</li>
 </ul>
 
 <h2>Soft Skills</h2>
 <ul>
-<li>✔ Communication</li>
-<li>✔ Problem Solving</li>
-<li>✔ Teamwork</li>
-<li>✔ Time Management</li>
-<li>✔ Adaptability</li>
-<li>✔ Analytical Thinking</li>
+<li>Communication</li>
+<li>Problem Solving</li>
+<li>Teamwork</li>
+<li>Time Management</li>
+<li>Adaptability</li>
+<li>Analytical Thinking</li>
 </ul>
 </section>
 
 <section id="certificates">
 <h2>Certificates</h2>
 
-<p>SAP FICO  
-<br><a href="#" class="btn">View Certificate</a></p>
+<p>SAP FICO <br>
+<a href="#" class="btn">View</a></p>
 
-<p>Business Analytics  
-<br><a href="#" class="btn">View Certificate</a></p>
+<p>Business Analytics <br>
+<a href="#" class="btn">View</a></p>
 
-<p>NISM SEBI Investor Awareness  
-<br><a href="#" class="btn">View Certificate</a></p>
+<p>NISM SEBI <br>
+<a href="#" class="btn">View</a></p>
 
-<p>Emerging Technologies for Managers  
-<br><a href="#" class="btn">View Certificate</a></p>
+<p>Emerging Technologies <br>
+<a href="#" class="btn">View</a></p>
 
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
-<p>📧 Email: gosalram9624@gmail.com</p>
+<p>Email: gosalram9624@gmail.com</p>
 </section>
+
+<script>
+function toggleMode() {
+    document.body.classList.toggle("dark");
+}
+</script>
 
 </body>
 </html>
