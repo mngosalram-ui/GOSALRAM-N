@@ -7,78 +7,125 @@
 
 <style>
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background: #f5f7fa;
-    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
 }
 
-header {
+/* NAVBAR */
+nav {
     background: #2c3e50;
-    color: white;
+    padding: 15px;
     text-align: center;
-    padding: 40px 20px;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
+/* HEADER */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* SECTION */
 section {
-    padding: 30px;
-    margin: 20px;
+    max-width: 900px;
+    margin: 30px auto;
     background: white;
+    padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
 h2 {
-    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
 }
 
 ul {
     padding-left: 20px;
 }
 
-.contact a {
-    color: #2980b9;
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
     text-decoration: none;
+    border-radius: 5px;
 }
 
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+}
 </style>
+
 </head>
 
 <body>
 
+<nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
 <header>
     <h1>Gosalram N</h1>
-    <p>MBA (Finance & Operations) | Aspiring Analyst</p>
+    <p>MBA | Finance & Operations | Aspiring Analyst</p>
+    <br>
+    <a href="#" class="btn">Download Resume</a>
 </header>
 
-<section>
+<section id="about">
 <h2>About Me</h2>
 <p>
-MBA graduate specializing in Finance and Operations with strong analytical and problem-solving skills. 
-Interested in financial analysis, business insights, and process improvement in manufacturing and corporate environments.
+MBA graduate specializing in Finance and Operations with strong analytical and problem-solving skills. Passionate about financial analysis, business insights, and process improvement.
 </p>
 </section>
 
-<section>
+<section id="education">
 <h2>Education</h2>
-<p><b>MBA (2024–2026)</b><br>SRM Valliammai Engineering College, Chennai</p>
-<p><b>B.Com (2021–2024)</b><br>Agurchand Munmull Jain College, Chennai</p>
+<p><b>MBA (2024–2026)</b><br>SRM Valliammai Engineering College</p>
+<p><b>B.Com (2021–2024)</b><br>Agurchand Munmull Jain College</p>
 </section>
 
-<section>
+<section id="projects">
 <h2>Projects</h2>
 
 <p><b>Impact of Industry 4.0 on Financial Sustainability</b><br>
-Bay Forge Pvt Ltd (2026)<br>
-Analyzed financial and operational data to evaluate cost efficiency and sustainability impact.</p>
+Bay Forge Pvt Ltd<br>
+Analyzed cost efficiency and sustainability using financial and operational data.</p>
 
-<p><b>Study on Organizational Performance</b><br>
-Sodecia India Pvt Ltd (2025)<br>
-Identified productivity gaps and suggested process improvements using performance data.</p>
+<p><b>Organizational Performance Study</b><br>
+Sodecia India Pvt Ltd<br>
+Identified productivity gaps and suggested improvements.</p>
 
 </section>
 
-<section>
+<section id="skills">
 <h2>Technical Skills</h2>
 <ul>
 <li>SAP FICO</li>
@@ -88,19 +135,7 @@ Identified productivity gaps and suggested process improvements using performanc
 <li>Microsoft 365</li>
 <li>Canva</li>
 </ul>
-</section>
 
-<section>
-<h2>Certifications</h2>
-<ul>
-<li>SAP FICO</li>
-<li>Business Analytics</li>
-<li>NISM SEBI Investor Awareness</li>
-<li>Emerging Technologies for Managers</li>
-</ul>
-</section>
-
-<section>
 <h2>Soft Skills</h2>
 <ul>
 <li>Time Management</li>
@@ -109,10 +144,14 @@ Identified productivity gaps and suggested process improvements using performanc
 </ul>
 </section>
 
-<section class="contact">
+<section id="contact">
 <h2>Contact</h2>
-<p>Email: <a href="mailto:gosalram9624@gmail.com">gosalram9624@gmail.com</a></p>
+<p>Email: gosalram9624@gmail.com</p>
 </section>
+
+<footer>
+<p>© 2026 Gosalram N</p>
+</footer>
 
 </body>
 </html>
