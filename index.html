@@ -31,18 +31,10 @@ header {
     padding: 60px 20px;
     background: linear-gradient(to right, #2c3e50, #3498db);
     color: white;
+    animation: fadeIn 1.5s ease-in;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 36px;
-}
-
-header p {
-    font-size: 18px;
-}
-
-/* SECTION */
+/* SECTIONS */
 section {
     max-width: 900px;
     margin: 30px auto;
@@ -50,15 +42,15 @@ section {
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+section:hover {
+    transform: scale(1.02);
 }
 
 h2 {
     border-bottom: 2px solid #3498db;
     padding-bottom: 5px;
-}
-
-ul {
-    padding-left: 20px;
 }
 
 /* BUTTON */
@@ -69,14 +61,18 @@ ul {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #2c3e50;
-    color: white;
+/* ICON STYLE */
+.icon {
+    margin-right: 8px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 </style>
 
@@ -89,6 +85,7 @@ footer {
     <a href="#education">Education</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
     <a href="#contact">Contact</a>
 </nav>
 
@@ -96,7 +93,9 @@ footer {
     <h1>Gosalram N</h1>
     <p>MBA | Finance & Operations | Aspiring Analyst</p>
     <br>
-   <a href="Gosalram_Resume.pdf" class="btn" download>Download Resume</a>
+    <a href="#" class="btn">Download Resume</a>
+    <br><br>
+    <a href="https://linkedin.com" class="btn">LinkedIn Profile</a>
 </header>
 
 <section id="about">
@@ -117,41 +116,57 @@ MBA graduate specializing in Finance and Operations with strong analytical and p
 
 <p><b>Impact of Industry 4.0 on Financial Sustainability</b><br>
 Bay Forge Pvt Ltd<br>
-Analyzed cost efficiency and sustainability using financial and operational data.</p>
+Analyzed cost efficiency and sustainability impact.</p>
 
 <p><b>Organizational Performance Study</b><br>
 Sodecia India Pvt Ltd<br>
-Identified productivity gaps and suggested improvements.</p>
+Identified productivity gaps and improvements.</p>
 
 </section>
 
 <section id="skills">
 <h2>Technical Skills</h2>
 <ul>
-<li>SAP FICO</li>
-<li>IBM SPSS</li>
-<li>MS Excel</li>
-<li>Power BI</li>
-<li>Microsoft 365</li>
-<li>Canva</li>
+<li>📊 SAP FICO</li>
+<li>📈 IBM SPSS</li>
+<li>📉 MS Excel</li>
+<li>📊 Power BI</li>
+<li>💻 Microsoft 365</li>
+<li>🎨 Canva</li>
 </ul>
 
 <h2>Soft Skills</h2>
 <ul>
-<li>Time Management</li>
-<li>Teamwork</li>
-<li>Analytical Thinking</li>
+<li>✔ Communication</li>
+<li>✔ Problem Solving</li>
+<li>✔ Teamwork</li>
+<li>✔ Time Management</li>
+<li>✔ Adaptability</li>
+<li>✔ Analytical Thinking</li>
 </ul>
+</section>
+
+<section id="certificates">
+<h2>Certificates</h2>
+
+<p>SAP FICO  
+<br><a href="#" class="btn">View Certificate</a></p>
+
+<p>Business Analytics  
+<br><a href="#" class="btn">View Certificate</a></p>
+
+<p>NISM SEBI Investor Awareness  
+<br><a href="#" class="btn">View Certificate</a></p>
+
+<p>Emerging Technologies for Managers  
+<br><a href="#" class="btn">View Certificate</a></p>
+
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
-<p>Email: gosalram9624@gmail.com</p>
+<p>📧 Email: gosalram9624@gmail.com</p>
 </section>
-
-<footer>
-<p>© 2026 Gosalram N</p>
-</footer>
 
 </body>
 </html>
