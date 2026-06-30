@@ -111,6 +111,8 @@ nav.solid{background:rgba(8,9,14,0.97);border-color:var(--b-gold);}
 .tl-yr::after{content:'';flex:1;height:1px;background:var(--border);}
 .tl-deg{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--white);margin-bottom:5px;}
 .tl-org{font-family:var(--mono);font-size:11px;color:var(--dim);}
+.edu-search-btn{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);text-decoration:none;background:var(--gold-bg);border:1px solid var(--b-gold);padding:6px 14px;border-radius:100px;transition:all .2s;}
+.edu-search-btn:hover{background:rgba(196,156,68,0.22);transform:translateY(-1px);}
 
 /* PROJECTS */
 #proj-display{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
@@ -126,7 +128,7 @@ nav.solid{background:rgba(8,9,14,0.97);border-color:var(--b-gold);}
 .proj-cta:hover{gap:14px;border-color:var(--gold);}
 
 /* SKILLS */
-.skills-layout{display:grid;grid-template-columns:1fr 1fr;gap:52px;}
+.skills-layout{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;}
 .sk-head{font-family:var(--mono);font-size:10px;letter-spacing:3px;color:var(--dim);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
 .sk-head::after{content:'';flex:1;height:1px;background:var(--border);}
 .pills{display:flex;flex-wrap:wrap;gap:9px;}
@@ -137,6 +139,8 @@ nav.solid{background:rgba(8,9,14,0.97);border-color:var(--b-gold);}
 .pill-g:hover{background:rgba(196,156,68,.2);transform:translateY(-3px);box-shadow:0 8px 20px rgba(196,156,68,.18);}
 .pill-b{background:rgba(60,120,220,.1);border:1px solid rgba(60,120,220,.2);color:#7ab0e8;}
 .pill-b:hover{background:rgba(60,120,220,.18);transform:translateY(-3px);box-shadow:0 8px 20px rgba(60,120,220,.12);}
+.pill-k{background:rgba(61,184,122,.1);border:1px solid rgba(61,184,122,.25);color:#5fd49a;}
+.pill-k:hover{background:rgba(61,184,122,.2);transform:translateY(-3px);box-shadow:0 8px 20px rgba(61,184,122,.15);}
 .search-hint{margin-top:28px;display:inline-flex;align-items:center;gap:8px;padding:12px 18px;background:var(--gold-bg);border:1px solid var(--b-gold);border-radius:100px;}
 .search-hint span:last-child{font-size:13px;color:var(--gold);font-family:var(--mono);letter-spacing:.5px;}
 
@@ -442,7 +446,7 @@ body.light{--bg:#f5f3ee;--bg2:#ede9e2;--panel:#e8e4db;--card:#dedad1;--border:rg
       <div class="h-stat"><div class="h-sn">MBA</div><div class="h-sl">2024–26</div></div>
       <div class="h-stat"><div class="h-sn">5+</div><div class="h-sl">Certs</div></div>
       <div class="h-stat"><div class="h-sn">2</div><div class="h-sl">Projects</div></div>
-      <div class="h-stat"><div class="h-sn">6+</div><div class="h-sl">Skills</div></div>
+      <div class="h-stat"><div class="h-sn">15+</div><div class="h-sl">Skills</div></div>
     </div>
   </div>
 </section>
@@ -469,8 +473,8 @@ body.light{--bg:#f5f3ee;--bg2:#ede9e2;--panel:#e8e4db;--card:#dedad1;--border:rg
 <div class="s-outer reveal" id="education">
   <div class="s-head"><div class="s-label">Academic Journey</div><h2 class="s-title">Edu<em>cation</em></h2></div>
   <div class="tl">
-    <div class="tl-item"><div class="tl-dot">🎓</div><div class="tl-card"><div class="tl-yr">2024 – 2026 · Completed</div><div class="tl-deg">Master of Business Administration</div><div class="tl-org">SRM Valliammai Engineering College </div></div></div>
-    <div class="tl-item"><div class="tl-dot">📚</div><div class="tl-card"><div class="tl-yr">2021 – 2024 · Completed</div><div class="tl-deg">Bachelor of Commerce</div><div class="tl-org">Agurchand Munmull Jain College</div></div></div>
+    <div class="tl-item"><div class="tl-dot">🎓</div><div class="tl-card"><div class="tl-yr">2024 – 2026 · Completed</div><div class="tl-deg">Master of Business Administration</div><div class="tl-org">SRM Valliammai Engineering College · Finance & Operations</div><div style="margin-top:14px;"><a href="https://www.google.com/search?q=SRM+Valliammai+Engineering+College" target="_blank" rel="noopener" class="edu-search-btn">🔍 Search College</a></div></div></div>
+    <div class="tl-item"><div class="tl-dot">📚</div><div class="tl-card"><div class="tl-yr">2021 – 2024 · Completed</div><div class="tl-deg">Bachelor of Commerce</div><div class="tl-org">Agurchand Munmull Jain College</div><div style="margin-top:14px;"><a href="https://www.google.com/search?q=Agurchand+Munmull+Jain+College" target="_blank" rel="noopener" class="edu-search-btn">🔍 Search College</a></div></div></div>
   </div>
 </div>
 
@@ -485,6 +489,7 @@ body.light{--bg:#f5f3ee;--bg2:#ede9e2;--panel:#e8e4db;--card:#dedad1;--border:rg
   <div class="s-head"><div class="s-label">Capabilities</div><h2 class="s-title">My <em>Skills</em></h2></div>
   <div class="skills-layout">
     <div><div class="sk-head">Technical</div><div class="pills" id="tech-disp"></div></div>
+    <div><div class="sk-head">Key Skills</div><div class="pills" id="key-disp"></div></div>
     <div><div class="sk-head">Soft Skills</div><div class="pills" id="soft-disp"></div></div>
   </div>
   <div class="search-hint">
@@ -688,6 +693,9 @@ body.light{--bg:#f5f3ee;--bg2:#ede9e2;--panel:#e8e4db;--card:#dedad1;--border:rg
         <div class="d-sub">Technical Skills</div>
         <div class="d-list" id="tech-edit"></div>
         <div class="add-r"><input class="fi" id="new-tech" placeholder="e.g. Tally ERP"/><button class="d-add-btn" onclick="addSkill('tech')">+ Add</button></div>
+        <div class="d-sub" style="margin-top:22px;">Key Skills</div>
+        <div class="d-list" id="key-edit"></div>
+        <div class="add-r"><input class="fi" id="new-key" placeholder="e.g. GST & Taxation"/><button class="d-add-btn" onclick="addSkill('key')">+ Add</button></div>
         <div class="d-sub" style="margin-top:22px;">Soft Skills</div>
         <div class="d-list" id="soft-edit"></div>
         <div class="add-r"><input class="fi" id="new-soft" placeholder="e.g. Leadership"/><button class="d-add-btn" onclick="addSkill('soft')">+ Add</button></div>
@@ -732,8 +740,9 @@ const DEFAULTS = {
     p2:"With a strong foundation in analytical tools like SAP FICO, IBM SPSS, and Power BI, I bridge the gap between financial strategy and operational efficiency.",
     p3:"I'm currently seeking opportunities to contribute as a Financial Analyst or Operations Specialist — where numbers meet meaningful strategy."
   },
-  tech:['📊 SAP FICO','📈 IBM SPSS','📋 MS Excel','🔵 Power BI','💼 Microsoft 365','🎨 Canva'],
-  soft:['💬 Communication','🔍 Problem Solving','🤝 Teamwork','⏱ Time Management','🔄 Adaptability','🧠 Analytical Thinking'],
+  tech:['📊 SAP FICO','📈 IBM SPSS','📋 MS Excel','🔵 Power BI','💼 Microsoft 365','🎨 Canva','⚡ AI-Powered Visuals in Power BI'],
+  key:['💰 Budgeting and Control','📥 Accounts Receivable','📤 Accounts Payable','📑 Financial Analysis','📊 Financial Reporting','📐 Cost Planning'],
+  soft:['🔍 Problem Solving','🤝 Teamwork','⏱ Time Management','🧠 Analytical Thinking'],
   projs:[
     {title:'Industry 4.0 Financial Study',tag:'Finance · Research',desc:'Analyzed cost efficiency and sustainability impact across manufacturing processes.',link:'Industry4_project.pdf'},
     {title:'Organizational Performance Study',tag:'Operations · Analysis',desc:'Identified productivity gaps and operational improvements within organizational structures.',link:'Sodecia_project.pdf'}
@@ -794,6 +803,7 @@ function exportData(){
   const data={
     gn_about:getData('about'),
     gn_tech:getData('tech'),
+    gn_key:getData('key'),
     gn_soft:getData('soft'),
     gn_projs:getData('projs'),
     gn_certs:getData('certs'),
@@ -954,9 +964,10 @@ function render(){
   const ab=getData('about');
   ['p1','p2','p3'].forEach(k=>{ const el=document.getElementById('about-'+k); if(el)el.innerHTML=ab[k]; });
 
-  const tech=getData('tech'),soft=getData('soft');
+  const tech=getData('tech'),soft=getData('soft'),key=getData('key');
   const clean=s=>s.replace(/^[\p{Emoji}\u200d\s]+/u,'').trim();
   document.getElementById('tech-disp').innerHTML=tech.map(s=>`<span class="pill pill-g" onclick="searchSkill('${clean(s).replace(/'/g,"\\'")} ')" title="Search ${clean(s)}">${s}</span>`).join('');
+  document.getElementById('key-disp').innerHTML=key.map(s=>`<span class="pill pill-k" onclick="searchSkill('${clean(s).replace(/'/g,"\\'")} ')" title="Search ${clean(s)}">${s}</span>`).join('');
   document.getElementById('soft-disp').innerHTML=soft.map(s=>`<span class="pill pill-b" onclick="searchSkill('${clean(s).replace(/'/g,"\\'")} ')" title="Search ${clean(s)}">${s}</span>`).join('');
 
   const projs=getData('projs');
@@ -997,8 +1008,9 @@ function saveAbout(){
 
 /* SKILLS */
 function rSkills(){
-  const t=getData('tech'),s=getData('soft');
+  const t=getData('tech'),s=getData('soft'),k=getData('key');
   document.getElementById('tech-edit').innerHTML=t.map((s,i)=>`<div class="d-item"><span>${s}</span><button class="d-del" onclick="delSkill('tech',${i})">✕ Remove</button></div>`).join('');
+  document.getElementById('key-edit').innerHTML=k.map((s,i)=>`<div class="d-item"><span>${s}</span><button class="d-del" onclick="delSkill('key',${i})">✕ Remove</button></div>`).join('');
   document.getElementById('soft-edit').innerHTML=s.map((s,i)=>`<div class="d-item"><span>${s}</span><button class="d-del" onclick="delSkill('soft',${i})">✕ Remove</button></div>`).join('');
 }
 function addSkill(tp){
